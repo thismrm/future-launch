@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
+    />
+    <title>Future Launch</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap");
+
+      * {
+        outline: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --background: #15141a;
+        --color: #dddddd;
+        --action-opacity: 1;
+        --action-opacity-active: 0.6;
+      }
+
+      body {
+        font-family: "Lexend", sans-serif;
+        overflow-y: scroll;
+        background-color: var(--background);
+        color: var(--color);
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 34px;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-weight: 300;
+        color: grey;
+        font-size: 28px;
+        margin-top: -32px;
+        margin-bottom: 32px;
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 12px;
+        line-height: 1.2;
+      }
+
+      h4 {
+        font-weight: 400;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 54px;
+        margin-bottom: 44px;
+        max-width: 280px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+        max-width: 70ch;
+      }
+
+      blockquote {
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        color: grey;
+      }
+
+      blockquote::before {
+        content: "\201C";
+        font-size: 44px;
+      }
+
+      blockquote::after {
+        content: "\201D";
+        font-size: 44px;
+      }
+
+      a,
+      button {
+        border-radius: 12px;
+        background-color: #f478b3;
+        padding: 12px;
+        cursor: pointer;
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+      }
+
+      button {
+        font-size: 18px;
+        font-family: "Lexend", sans-serif;
+        border: none;
+      }
+
+      input[type="text"] {
+        background-color: white;
+        border: none;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "Lexend", sans-serif;
+        padding: 12px;
+        margin-bottom: 12px;
+      }
+
+      img {
+        cursor: pointer;
+        max-width: 100%;
+        max-height: 640px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      ul {
+        font-size: 20px;
+        padding-left: 20px;
+        margin-bottom: 24px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      main {
+        margin: 0 auto;
+        padding-top: 72px;
+        padding-bottom: 240px;
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 32px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 44px;
+      }
+
+      .action {
+        opacity: var(--action-opacity);
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .action:hover {
+        opacity: var(--action-opacity-active);
+      }
+
+      @media (min-width: 360px) {
+        .sidebar {
+          display: none;
+        }
+
+        input {
+          width: 300px;
+        }
+
+        h4 {
+          max-width: 260px;
+        }
+      }
+
+      @media (min-width: 414px) {
+        h4 {
+          max-width: 320px;
+        }
+      }
+
+      @media (min-width: 540px) {
+        h4 {
+          max-width: 440px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        main {
+          max-width: 648px;
+        }
+
+        h4 {
+          max-width: 520px;
+        }
+      }
+
+      @media (min-width: 820px) {
+        main {
+          max-width: 700px;
+        }
+
+        h4 {
+          max-width: 580px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        main {
+          margin: 0 auto;
+          padding-top: 72px;
+          padding-bottom: 240px;
+        }
+
+        h1 {
+          font-weight: 700;
+          font-size: 44px;
+          margin-bottom: 40px;
+        }
+
+        h2 {
+          font-weight: 300;
+          color: grey;
+          font-size: 32px;
+          margin-top: -32px;
+          margin-bottom: 32px;
+        }
+
+        h3 {
+          font-weight: 700;
+          font-size: 24px;
+          margin-bottom: 12px;
+          line-height: 1.2;
+        }
+
+        h4 {
+          font-weight: 400;
+          max-width: 720px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 1.8;
+          margin-top: 96px;
+          margin-bottom: 64px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 1.8;
+          margin-bottom: 32px;
+          max-width: 70ch;
+        }
+
+        main {
+          margin: 0 auto;
+          padding-top: 72px;
+          padding-bottom: 240px;
+          max-width: 852px;
+        }
+      }
+
+      @media (min-width: 980px) {
+        .sidebar {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 979px) {
+        .sidebar {
+          padding: 10px 12px;
+          position: fixed;
+          top: 0;
+          left: 0px;
+          right: 0px;
+          display: flex;
+          height: 58px;
+          justify-content: center;
+          flex-direction: row;
+          gap: 40px;
+          background-color: var(--background);
+        }
+        #actionQuote,
+        #actionParagraph {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>🚀 Future Launch</h1>
+      <h2>Validate your idea. Faster</h2>
+      <h4>Don't waste your time on the idea that won't works 😖</h4>
+      <h3 style="margin-top: 60px">Give future launch a try 👏</h3>
+      <p>
+        And let's see the willingness of your target customers to try out your
+        product even bofore you build it
+      </p>
+      <h3 style="margin-top: 154px">Create your account 👇</h3>
+      <div class="subscribe">
+        <form action="/subscribe" method="get">
+          <input
+            style="border-radius: 12px"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="name@email.com"
+          />
+          <button>Sign up</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
